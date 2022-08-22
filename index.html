@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple text editor</title>
+    <link rel="stylesheet" href="css/main.css" media="screen">
+    <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+
+<body>
+    <header class="unselectable">
+        <ul>
+            <li><button value="span-none" onclick="changeTextStyle(this)">Reset text formatting</button></li>
+            <li><button value="span-b" onclick="changeTextStyle(this)"><b>b</b></button></li>
+            <li><button value="span-i" onclick="changeTextStyle(this)"><i>i</i></button></li>
+            <li><button value="span-u" onclick="changeTextStyle(this)" class="span-u">u</button></li>
+        </ul>
+        <ul>
+            <li><button value="span-text-left" onclick="changeTextStyle(this)"><img src="/media/left-align.png" height="16"></button></li>
+            <li><button value="span-text-center" onclick="changeTextStyle(this)"><img src="/media/center-align.png" height="16"></button></li>
+            <li><button value="span-text-right" onclick="changeTextStyle(this)"><img src="/media/right-align.png" height="16"></button></li>
+        </ul>
+        <ul>
+            <li><button value="span" onclick="changeHeading(this)">default text<br>Normal</button></li>
+            <li><button value="p" onclick="changeHeading(this)">Simple text<br>Paragraph</button></li>
+            <li><button value="h1" onclick="changeHeading(this)">Headline<br>Heading 1</button></li>
+            <li><button value="h2" onclick="changeHeading(this)">Headline<br>Heading 2</button></li>
+            <li><button value="h3" onclick="changeHeading(this)">Headline<br>Heading 3</button></li>    
+        </ul>
+        <ul>
+            <li><button onclick="printPage()">Print</button></li>
+        </ul>
+    </header>
+
+    <main>
+        <div id="editor"><p id="text" contenteditable="true" onKeyUp="charactersCount()"></p></div>
+    </main>
+
+    <footer class="unselectable">
+        <p id="charCount">0 characters</p>
+    </footer>
+
+    <script src="/js/changeTextStyle.js"></script>
+    <script src="/js/changeHeading.js"></script>
+    <script src="/js/printPage.js"></script>
+    <script src="/js/charactersCount.js"></script>
+</body>
+
+</html>

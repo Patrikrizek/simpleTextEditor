@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    background-color: lightgrey;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(235, 235, 235);
+    box-shadow: 2px 0 5px gray;
+    margin-bottom: 2rem;
+}
+
+header ul li {
+    display: inline;
+}
+
+button {
+    outline: none;
+    padding: .5rem 1rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#editor {
+    height: 297mm;
+    width: 210mm;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: .1em;
+    outline: none;
+    padding: 25mm;
+    overflow: hidden;
+}
+
+#editor p {
+    height: 100%;
+    width: 100%;
+    outline: none;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(235, 235, 235);
+    margin-top: 2rem;
+}
+
+.span-none {
+    display: initial;
+    font-weight: none;
+    text-decoration: none;
+    font-style: none;
+    text-align: start;
+}
+
+.span-b {
+    font-weight: bold;
+}
+
+.span-i {
+    font-style: italic;
+}
+
+.span-u {
+    text-decoration: underline;
+}
+
+.span-text-left {
+    float: left;
+}
+
+.span-text-center {
+    display:block;
+    text-align:center;
+}
+
+.span-text-right {
+    display: block;
+    float: right;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
